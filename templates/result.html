@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Information</title>
+    <link href="../static/style.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(229, 238, 238);
+            font-family: Arial, sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            background-color: rgb(229, 238, 238);
+            padding: 10px;
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid #ccc;
+            width: 100%;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .delivery-info p {
+            margin: 10px 0;
+        }
+
+        .delivery-info {
+            line-height: 1.6;
+            background-color: rgb(229, 238, 238);
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Delivery Status</h1>
+    <div class="container">
+        <div class="delivery-info">
+            <p class="bold">Trip successfully created!</p>
+            <p>Your trip was created on <span class="bold">{{ trip_creation_time }}</span></p>
+            <p>Trip ID: <span class="bold">{{ trip_id }}</span></p>
+            <p>From: <span class="bold">{{ source_cities }}</span> ({{ source_states }})</p>
+            <p>To: <span class="bold">{{ destination_cities }}</span> ({{ destination_states }})</p>
+            <p>Delivery Type: <span class="bold">{{ "FTL" if rout_type == 1 else "Carting" }}</span></p>
+            <p>The travelling time will take approximately <span class="bold">{{ actual_time_display }}</span></p>
+            <p>The delivery is expected to arrive by <span class="bold">{{ actual_time }}</span></p>
+            <a href="/"><input type="button" value="Create New Trip"></a>
+
+        </div>
+    
+    </div>
+</body>
+
+</html>
