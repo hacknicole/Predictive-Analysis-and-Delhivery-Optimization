@@ -1,0 +1,70 @@
+# <h1 align='center'> <font color='black'><font size=7> PREDICTIVE ANALYSIS AND DELHIVERY OPTIMIZATION </font> </font></h1>
+
+![tdsp](https://media.assettype.com/creativegaga%2F2022-05%2F93ef3455-07b4-4242-93ee-727a8cc0ce0c%2FDelhivery_logo.gif)
+![tdsp](https://images.squarespace-cdn.com/content/v1/51763a50e4b083b631f0694e/1563609530026-ZGTY0JCT9C8YPO1HYA4L/image-asset.gif)
+
+# Introduction
+<p align="justify"> Delhivery is the largest supply chain company in India in terms of Turnover, market capitalization, and volumes. This project is solely aimed at using Machine Learning and  Data Science to elevate Delhivery's delivery optimization strategies. 
+The project is based on the basic principles of Logistics and segment management. The real data seem to divert more from the theory of Supply Chain and Logistics so far and this calls the attention of advanced technical systems and statistical approaches to identify and rectify the situations affecting smooth transport and customer satisfaction.
+
+<p align="justify">We're analyzing publicly available data on Delhivery's operations. This data includes trip details, routes, facility locations, distances, and more – a valuable resource with multiple variables. 
+Our goal is to identify hidden patterns and opportunities that can streamline Delhivery's delivery network, ultimately leading to faster and more efficient processes.
+</p>
+
+# Problem Statement
+<p align="justify"> Improving delivery route planning and optimizing delivery schedules while ensuring timely and reliable service.
+Building predictive models to estimate delivery times for different routes and time slots. Accurate delivery time estimation enhances customer satisfaction and enables Delhivery to provide reliable service commitments.
+</p>
+
+# Dataset Description
+<p align="justify"> The dataset used for this project is sourced from the <a href="https://www.kaggle.com/datasets/nayanack/delhivery">Kaggle</a> repository, intended for Machine Learning Model development.</p>
+
+<p align="justify">The dataset comprises 14817 unique trips that are segmented. The original data includes 144867 rows. The dataset contains location data, time of arrival, time of departure, distance for a trip, an attribute called 'factor' associated with each trip, and unique IDs. 
+It is provided in CSV format with 24 attributes, including 12 object columns, 11 numerical columns, and 1 boolean category. The target column is the Actual time in minutes, indicating that our modeling problem is a regression task.
+</p>
+
+## Features of the Dataset
+| Feature | Description |
+|:--------|:------------|
+|data| tells whether the data is testing or training data|
+|trip_creation_time| Timestamp of trip creation|
+|route_schedule_uuid| Unique ID for a particular route schedule|
+|**route_type**| **Transportation type**|
+|a. FTL–Full Truck Load| FTL shipments get to the destination sooner, as the truck is making no other pickups or drop-offs along the way|
+|b. Carting | Handling system consisting of small vehicles (carts)|
+|trip_uuid| Unique ID given to a particular trip (A trip may include different source and destination centers)|
+|source_center| Source ID of trip origin |
+|source_name| Source Name of trip origin | 
+|destination_center| Destination ID |
+|destination_name| Destination Name | 
+|od_start_time| Trip start time | 
+|od_end_time| Trip end time |
+|start_scan_to_end_scan | Time taken to deliver from source to destination |
+|is_cutoff | Unknown field |
+|cutoff_factor | Unknown field|
+|cutoff_timestamp | Unknown field|
+|actual_distance_to_destination | Distance in kms between source and destination warehouse|
+|actual_time | Actual time taken to complete the delivery (Cumulative) |
+|osrm_time | An open-source routing engine time calculator which computes the shortest path between points in a given map (Includes usual traffic, distance through major and minor roads) and gives the time (Cumulative) |
+|osrm_distance | An open-source routing engine which computes the shortest path between points in a given map (Includes usual traffic, distance through major and minor roads) (Cumulative) |
+|factor | Unknown field |
+| segment_actual_time | This is a segment time. Time taken by the subset of the package delivery|
+|segment_osrm_time | This is the OSRM segment time. Time taken by the subset of the package delivery|
+| segment_osrm_distance | This is the OSRM distance. Distance covered by subset of the package delivery|
+| segment_factor | Unknown field |
+
+# Flask Web Application
+<p align="justify"> The Flask application was developed to provide a lightweight and flexible web framework for our project. Flask, a micro-framework for Python, was chosen due to its simplicity and the ease with which it can be extended. 
+Delivery information is taken through a HTML form. Users can select source and destination details. When the user selects source state, corresponding source names will be listed in source name dropdown. And the same procedure is followed in destination details. 
+Then select the load type whether FTL or carting. Result page will display trip creation time, unique trip id ,source and destination details,load type, actual time for traveling and expected arrival time.</p>
+
+Hosted Website: <a href="https://delhivery-prediction.onrender.com/"> Dehlivery Information </a>
+
+# References
+- <a href = "https://www.kaggle.com/code/ranitsarkar01/delhivery-data-feature-engineering"> Sarkar, R. (2024, March 1). Delhivery data feature engineering </a>
+- <a href = "https://www.kaggle.com/code/noohinaaz/delhivery-feature-engineering"> Naaz, N.  Delhivery feature engineering </a>
+- <a href = "https://www.kaggle.com/code/akkyjaicar/delhivery-feature-engg/execution"> Jaiswal, A.  Delhivery feature engineering/execution </a>
+
+
+
+
