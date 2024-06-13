@@ -1,4 +1,4 @@
-# <h1 align='center'> <font color='black'><font size=7> PREDICTIVE ANALYSIS AND DELHIVERY OPTIMIZATION </font> </font></h1>
+# <h1 align='center'> <font color='black'> <font size=7> PREDICTIVE ANALYSIS AND DELHIVERY OPTIMIZATION </font> </font></h1>
 
 ![tdsp](https://media.assettype.com/creativegaga%2F2022-05%2F93ef3455-07b4-4242-93ee-727a8cc0ce0c%2FDelhivery_logo.gif)
 ![tdsp](https://images.squarespace-cdn.com/content/v1/51763a50e4b083b631f0694e/1563609530026-ZGTY0JCT9C8YPO1HYA4L/image-asset.gif)
@@ -45,26 +45,44 @@ It is provided in CSV format with 24 attributes, including 12 object columns, 11
 |cutoff_timestamp | Unknown field|
 |actual_distance_to_destination | Distance in kms between source and destination warehouse|
 |actual_time | Actual time taken to complete the delivery (Cumulative) |
-|osrm_time | An open-source routing engine time calculator which computes the shortest path between points in a given map (Includes usual traffic, distance through major and minor roads) and gives the time (Cumulative) |
+|osrm_time | An open-source routing engine time calculator that computes the shortest path between points in a given map (Includes usual traffic, and distance through major and minor roads) and gives the time (Cumulative) |
 |osrm_distance | An open-source routing engine which computes the shortest path between points in a given map (Includes usual traffic, distance through major and minor roads) (Cumulative) |
 |factor | Unknown field |
 | segment_actual_time | This is a segment time. Time taken by the subset of the package delivery|
 |segment_osrm_time | This is the OSRM segment time. Time taken by the subset of the package delivery|
-| segment_osrm_distance | This is the OSRM distance. Distance covered by subset of the package delivery|
+| segment_osrm_distance | This is the OSRM distance. Distance covered by a subset of the package delivery|
 | segment_factor | Unknown field |
 
 # Flask Web Application
 <p align="justify"> The Flask application was developed to provide a lightweight and flexible web framework for our project. Flask, a micro-framework for Python, was chosen due to its simplicity and the ease with which it can be extended. 
-Delivery information is taken through a HTML form. Users can select source and destination details. When the user selects source state, corresponding source names will be listed in source name dropdown. And the same procedure is followed in destination details. 
-Then select the load type whether FTL or carting. Result page will display trip creation time, unique trip id ,source and destination details,load type, actual time for traveling and expected arrival time.</p>
+Delivery information is taken through an HTML form. Users can select source and destination details. When the user selects the source state, corresponding source names will be listed in the source name dropdown. And the same procedure is followed in destination details. 
+Then select the load type whether FTL or carting. The result page will display trip creation time, unique trip id, source and destination details, load type, actual time for traveling, and expected arrival time.</p>
 
 Hosted Website: <a href="https://delhivery-prediction.onrender.com/"> Dehlivery Information </a>
+
+# Screenshots
+## Website Page of Dehlivery Date Prediction
+![ss1](https://github.com/hacknicole/Predictive-Analysis-and-Delhivery-Optimization/blob/main/assets/websitepage.png)
+
+## Select Source State from the DropDown List
+![ss2](https://github.com/hacknicole/Predictive-Analysis-and-Delhivery-Optimization/blob/main/assets/sourcestate.png)
+
+## From Source State, Select Souce Name from the DropDown List
+![ss3](https://github.com/hacknicole/Predictive-Analysis-and-Delhivery-Optimization/blob/main/assets/sourcename.png)
+
+## Select Destination State from the DropDown List
+![ss4](https://github.com/hacknicole/Predictive-Analysis-and-Delhivery-Optimization/blob/main/assets/deststate.png)
+
+## From Destination State, Select Destination Name from the DropDown List
+![ss5](https://github.com/hacknicole/Predictive-Analysis-and-Delhivery-Optimization/blob/main/assets/destname.png)
+
+## Select the Load Type (Carting or FTL)
+![ss6](https://github.com/hacknicole/Predictive-Analysis-and-Delhivery-Optimization/blob/main/assets/loadtype.png)
+
+## Dehlivery Status Page 
+![ss7](https://github.com/hacknicole/Predictive-Analysis-and-Delhivery-Optimization/blob/main/assets/statuspage.png)
 
 # References
 - <a href = "https://www.kaggle.com/code/ranitsarkar01/delhivery-data-feature-engineering"> Sarkar, R. (2024, March 1). Delhivery data feature engineering </a>
 - <a href = "https://www.kaggle.com/code/noohinaaz/delhivery-feature-engineering"> Naaz, N.  Delhivery feature engineering </a>
 - <a href = "https://www.kaggle.com/code/akkyjaicar/delhivery-feature-engg/execution"> Jaiswal, A.  Delhivery feature engineering/execution </a>
-
-
-
-
